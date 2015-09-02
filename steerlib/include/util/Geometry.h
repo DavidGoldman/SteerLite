@@ -380,71 +380,21 @@ namespace Util {
 	/// Returns true if the two 2D circles overlap, false if they do not.
 	static inline bool circleOverlapsCircle2D(const Point & c1, float r1, const Point & c2, float r2)
 	{
-		float distSquared = (c2-c1).lengthSquared();
-		float distThreshold = (r1+r2);
-		float distSquaredThreshold = distThreshold*distThreshold;
-		return (distSquared<distSquaredThreshold);
+		return false;
 	}
 
 
 	/// Returns the max penetration if they overlap, 0.0, if they do not.
 	static inline float computeCircleCirclePenetration2D(const Point & c1, float r1, const Point & c2, float r2)
 	{
-		float dist = (c2-c1).length();
-		float distThreshold = (r1+r2);
-		float penetration = distThreshold - dist;
-		return (penetration < 0.0f) ? 0.0f : penetration;
+		return false;
 	}
 
 
 	/// Returns true if a 2D circle and 2D box overlap, false if they do not.
 	static inline bool boxOverlapsCircle2D(float xmin, float xmax, float zmin, float zmax, const Point & circleCenter, float radius)
 	{
-		bool overlaps;
-		float radiusSquared;
-
-		// Translate coordinates, placing the circleCenter at the origin.
-		xmin -= circleCenter.x;
-		xmax -= circleCenter.x;
-		zmin -= circleCenter.z;
-		zmax -= circleCenter.z;
-		radiusSquared = radius * radius;
-
-		if (xmax < 0) { // R to left of circle center
-			if (zmax < 0) {			// R in lower left corner
-				overlaps = ((xmax * xmax + zmax * zmax) < radiusSquared);
-			}
-			else if (zmin > 0) { // R in upper left corner
-				overlaps = ((xmax * xmax + zmin * zmin) < radiusSquared);
-			}
-			else {					// R due West of circle
-				overlaps = ( fabsf(xmax) < radius);	
-			}
-		}
-		else if (xmin > 0) { // R to right of circle center
-			if (zmax < 0) {			// R in lower right corner
-				overlaps = ((xmin * xmin + zmax * zmax) < radiusSquared);
-			}
-			else if (zmin > 0) {	// R in upper right corner
-				overlaps = ((xmin * xmin + zmin * zmin) < radiusSquared);
-			}
-			else {					// R due East of circle
-				overlaps = (xmin < radius);
-			}
-		}
-		else { // R on circle vertical centerline
-			if (zmax < 0) {			// R due South of circle
-				overlaps = (fabsf(zmax) < radius);
-			}
-			else if (zmin > 0) {	// R due North of circle
-				overlaps = (zmin < radius);
-			}
-			else {					// R contains circle centerpoint
-				overlaps = true;
-			}
-		}
-
-		return overlaps;
+		return false;
 	}
 
 
@@ -466,52 +416,7 @@ namespace Util {
 	 */
 	static inline float computeBoxCirclePenetration2D(float xmin, float xmax, float zmin, float zmax, const Point & circleCenter, float radius)
 	{
-		float radiusSquared;
-		float penetration = 0.0f;
-
-		// Translate coordinates, placing circleCenter at the origin.
-		xmin -= circleCenter.x;
-		xmax -= circleCenter.x;
-		zmin -= circleCenter.z;
-		zmax -= circleCenter.z;
-		radiusSquared = radius * radius;
-
-		if (xmax < 0) {		// R to left of circle center
-			if (zmax < 0) {			// R in lower left corner
-				penetration = radius - sqrtf(xmax * xmax + zmax * zmax);
-			}
-			else if (zmin > 0) {	// R in upper left corner
-				penetration = radius - sqrtf(xmax * xmax + zmin * zmin);
-			}
-			else {					// R due West of circle
-				penetration = radius - fabsf(xmax);
-			}
-		}
-		else if (xmin > 0) {// R to right of circle center
-			if (zmax < 0) {			// R in lower right corner
-				penetration = radius - sqrtf(xmin * xmin + zmax * zmax);
-			}
-			else if (zmin > 0) {	// R in upper right corner
-				penetration = radius - sqrtf(xmin * xmin + zmin * zmin);
-			}
-			else {					// R due East of circle
-				penetration = radius - xmin;
-			}
-		}
-		else {				// R on circle vertical centerline
-			if (zmax < 0) {			// R due South of circle
-				penetration = radius - fabsf(zmax);
-			}
-			else if (zmin > 0) {	// R due North of circle
-				penetration = radius - zmin;
-			}
-			else { // R contains circle centerpoint
-				// WARNING!!! Read the documentation of this function to understand this special case.
-				// clamping the penetration.
-				penetration = radius;
-			}
-		}
-		return (penetration > 0) ? penetration : 0.0f;
+		return false;
 	} 	
 
 
