@@ -370,7 +370,6 @@ namespace SteerLib {
 	template < class PlanningDomain, class PlanningState, class PlanningAction >
 	bool BestFirstSearchPlanner< PlanningDomain, PlanningState, PlanningAction >::_computePlan( const PlanningState & startState, const PlanningState & idealGoalState, std::map<PlanningState, BestFirstSearchNode<PlanningState, PlanningAction> > & stateMap, PlanningState & actualStateReached )
 	{
-
 		std::set<BestFirstSearchNode<PlanningState, PlanningAction>, CompareCosts<PlanningState, PlanningAction> > openSet;
 
 		stateMap.clear();
@@ -381,6 +380,67 @@ namespace SteerLib {
 
 		stateMap[nextNode.action.state] = nextNode;
 		openSet.insert( nextNode );
+
+		unsigned int numNodesExpanded = 0;
+
+		while ((numNodesExpanded < _maxNumNodesToExpand) && (!openSet.empty())) {
+
+			numNodesExpanded++;
+
+			// get a copy of the first element of the open set (i.e. about to pop it, but only if we get past the next if-statement).
+			BestFirstSearchNode<PlanningState, PlanningAction> x = *(openSet.begin());
+
+			// ask the user if this node is a goal state.  If so, then finish up.
+			if ( _planningDomain->isAGoalState( x.action.state, idealGoalState ) ) {
+				actualStateReached = x.action.state;
+				return true;
+			}
+
+			// move x from open set to closed set.
+			// NOTE CAREFULLY that nodeInMap is an alias, so that means we are also 
+			// modifying the boolean alreadyExpanded in the stateMap as well.
+			openSet.erase( openSet.begin() );
+			BestFirstSearchNode<PlanningState, PlanningAction> & nodeInMap = (*stateMap.find(x.action.state)).second;
+			nodeInMap.alreadyExpanded = true;
+
+			// ask the user to generate all the possible actions from this state.
+			std::vector<PlanningAction> possibleActions;
+			possibleActions.clear();
+			_planningDomain->generateTransitions( x.action.state, x.previousState, idealGoalState, possibleActions );
+
+			// iterate over each potential action, and add it to the open list.
+			// if the node was already seen before, then it is updated if the new cost is better than the old cost.
+			for ( typename std::vector<PlanningAction>::const_iterator action = possibleActions.begin();  action != possibleActions.end(); ++action) {
+
+				float newg = x.g + (*action).cost;
+
+				typename std::map<PlanningState, BestFirstSearchNode<PlanningState, PlanningAction> >::iterator existingNode;
+				existingNode = stateMap.find( (*action).state );
+				if ( existingNode != stateMap.end() ) {
+					// then, that means this node was seen before.
+					if (newg < (*existingNode).second.g) {
+						// then, this means we need to update the node.
+						if ((*existingNode).second.alreadyExpanded == false) {
+							openSet.erase((*existingNode).second);
+						}
+						stateMap.erase(existingNode);
+					}
+					else {
+						// otherwise, we don't bother adding this node... it already exists with a better cost.
+						continue;
+					}
+				}
+
+
+				float newf = _planningDomain->estimateTotalCost((*action).state, idealGoalState, newg);
+				nextNode = BestFirstSearchNode<PlanningState, PlanningAction>(newg, newf, x.action.state, (*action));
+
+				stateMap[nextNode.action.state] = nextNode;
+				openSet.insert( nextNode );
+			}
+		}
+
+
 
 		if (openSet.empty()) {
 			// if we get here, there was no solution.
@@ -396,11 +456,8 @@ namespace SteerLib {
 			actualStateReached = (*(openSet.begin())).action.state;
 		}
 
-
 		return false;  // returns false because plan is incomplete.
-
 	}
-
 
 } // end namespace SteerLib
 
