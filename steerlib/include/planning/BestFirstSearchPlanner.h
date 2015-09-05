@@ -412,28 +412,8 @@ namespace SteerLib {
 			// if the node was already seen before, then it is updated if the new cost is better than the old cost.
 			for ( typename std::vector<PlanningAction>::const_iterator action = possibleActions.begin();  action != possibleActions.end(); ++action) {
 
-				float newg = x.g + (*action).cost;
-
-				typename std::map<PlanningState, BestFirstSearchNode<PlanningState, PlanningAction> >::iterator existingNode;
-				existingNode = stateMap.find( (*action).state );
-				if ( existingNode != stateMap.end() ) {
-					// then, that means this node was seen before.
-					if (newg < (*existingNode).second.g) {
-						// then, this means we need to update the node.
-						if ((*existingNode).second.alreadyExpanded == false) {
-							openSet.erase((*existingNode).second);
-						}
-						stateMap.erase(existingNode);
-					}
-					else {
-						// otherwise, we don't bother adding this node... it already exists with a better cost.
-						continue;
-					}
-				}
-
-
-				float newf = _planningDomain->estimateTotalCost((*action).state, idealGoalState, newg);
-				nextNode = BestFirstSearchNode<PlanningState, PlanningAction>(newg, newf, x.action.state, (*action));
+				float newf = _planningDomain->estimateTotalCost((*action).state, idealGoalState, 0.0f);
+				nextNode = BestFirstSearchNode<PlanningState, PlanningAction>(0.0f, newf, x.action.state, (*action));
 
 				stateMap[nextNode.action.state] = nextNode;
 				openSet.insert( nextNode );
