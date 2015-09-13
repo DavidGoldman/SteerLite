@@ -1,0 +1,363 @@
+<SteerBenchTestCase xmlns="http://www.magix.ucla.edu/steerbench"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://www.magix.ucla.edu/steerbench 
+                                        TestCaseSchema.xsd">
+
+  <header>
+    <version>1.0</version>
+    <name>custom-djg191</name>
+    <worldBounds>
+      <xmin>-73</xmin>
+      <xmax>73</xmax>
+      <ymin>0</ymin>
+      <ymax>0</ymax>
+      <zmin>-73</zmin>
+      <zmax>73</zmax>
+    </worldBounds>
+  </header>
+  
+  <suggestedCameraView>
+    <position> <x>-20</x> <y>50</y> <z>-20</z> </position>
+    <lookat> <x>0</x> <y>0</y> <z>0</z> </lookat>
+    <up> <x>0</x> <y>1</y> <z>0</z> </up>
+    <fovy>35</fovy>
+  </suggestedCameraView>
+
+  <suggestedCameraView>
+    <position> <x>20</x> <y>50</y> <z>20</z> </position>
+    <lookat> <x>0</x> <y>0</y> <z>0</z> </lookat>
+    <up> <x>0</x> <y>1</y> <z>0</z> </up>
+    <fovy>45</fovy>
+  </suggestedCameraView>
+
+  <suggestedCameraView>
+    <position> <x>0</x> <y>100</y> <z>0</z> </position>
+    <lookat> <x>0</x> <y>0</y> <z>0</z> </lookat>
+    <up> <x>0</x> <y>1</y> <z>0</z> </up>
+    <fovy>45</fovy>
+  </suggestedCameraView>
+
+  <!-- Top Left Room -->
+  <obstacle>
+    <xmin>-15</xmin>
+    <xmax>-5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-20</zmin>
+    <zmax>-20</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>-15</xmin>
+    <xmax>-5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-10</zmin>
+    <zmax>-10</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>-15</xmin>
+    <xmax>-15</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-10</zmin>
+    <zmax>-20</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>-5</xmin>
+    <xmax>-5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-20</zmin>
+    <zmax>-17</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>-5</xmin>
+    <xmax>-5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-10</zmin>
+    <zmax>-13</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>-5</xmin>
+    <xmax>-5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-16</zmin>
+    <zmax>-14</zmax>
+  </obstacle>
+
+  <!-- Top Right Room -->
+  <obstacle>
+    <xmin>15</xmin>
+    <xmax>5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-20</zmin>
+    <zmax>-20</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>15</xmin>
+    <xmax>5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-10</zmin>
+    <zmax>-10</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>15</xmin>
+    <xmax>15</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-10</zmin>
+    <zmax>-20</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>5</xmin>
+    <xmax>5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-20</zmin>
+    <zmax>-17</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>5</xmin>
+    <xmax>5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-10</zmin>
+    <zmax>-13</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>5</xmin>
+    <xmax>5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-16</zmin>
+    <zmax>-14</zmax>
+  </obstacle>
+
+  <!-- Bottom Right Room -->
+  <obstacle>
+    <xmin>15</xmin>
+    <xmax>15</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-5</zmin>
+    <zmax>5</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>5</xmin>
+    <xmax>5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-5</zmin>
+    <zmax>-2</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>5</xmin>
+    <xmax>5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>2</zmin>
+    <zmax>5</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>5</xmin>
+    <xmax>5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-1</zmin>
+    <zmax>1</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>15</xmin>
+    <xmax>5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-5</zmin>
+    <zmax>-5</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>15</xmin>
+    <xmax>5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>5</zmin>
+    <zmax>5</zmax>
+  </obstacle>
+
+  <!-- Bottom Left Room -->
+  <obstacle>
+    <xmin>-15</xmin>
+    <xmax>-15</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-5</zmin>
+    <zmax>5</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>-5</xmin>
+    <xmax>-5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-5</zmin>
+    <zmax>-2</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>-5</xmin>
+    <xmax>-5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>2</zmin>
+    <zmax>5</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>-5</xmin>
+    <xmax>-5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-1</zmin>
+    <zmax>1</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>-15</xmin>
+    <xmax>-5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-5</zmin>
+    <zmax>-5</zmax>
+  </obstacle>
+  <obstacle>
+    <xmin>-15</xmin>
+    <xmax>-5</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>5</zmin>
+    <zmax>5</zmax>
+  </obstacle>
+
+  <!-- W-E Midsection -->
+  <obstacle>
+    <xmin>-15</xmin>
+    <xmax>15</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-8</zmin>
+    <zmax>-7</zmax>
+  </obstacle>
+  <!-- Upper N-S Midsection -->
+  <obstacle>
+    <xmin>-4</xmin>
+    <xmax>4</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-20</zmin>
+    <zmax>-8</zmax>
+  </obstacle>
+  <!-- Lower N-S Midsection -->
+  <obstacle>
+    <xmin>-4</xmin>
+    <xmax>4</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-6</zmin>
+    <zmax>5</zmax>
+  </obstacle>
+
+  <!-- Crashes due to too many agents in a given cell.
+  <agentRegion>
+    <numAgents>50</numAgents>
+    <regionBounds>
+      <xmin>-14</xmin>
+      <xmax>-6</xmax>
+      <ymin>0</ymin>
+      <ymax>0</ymax>
+      <zmin>-19</zmin>
+      <zmax>-11</zmax>
+    </regionBounds>
+    <initialConditions>
+      <direction> <x>1</x> <y>0</y> <z>1</z> </direction>
+      <radius>0.5</radius>
+      <speed>0</speed>
+    </initialConditions>
+    <goalSequence>
+      <seekStaticTarget>
+        <targetLocation> <x>10</x> <y>0</y> <z>0</z> </targetLocation>
+        <desiredSpeed>1.3</desiredSpeed>
+        <timeDuration>1000.0</timeDuration>
+      </seekStaticTarget>
+    </goalSequence>
+  </agentRegion>
+--> 
+
+  <agent>
+    <name>Top Left</name>
+    <initialConditions>
+      <radius>0.5</radius>
+      <position> <x>-10</x> <y>0</y> <z>-15</z> </position>
+      <direction> <x>1</x> <y>0</y> <z>1</z> </direction>
+      <speed>0</speed>
+    </initialConditions>
+    <goalSequence>
+      <seekStaticTarget>
+        <targetLocation> <x>10</x> <y>0</y> <z>0</z> </targetLocation>
+        <desiredSpeed>1.3</desiredSpeed>
+        <timeDuration>1000.0</timeDuration>
+      </seekStaticTarget>
+    </goalSequence>
+  </agent>
+
+  <agent>
+    <name>Bottom Right</name>
+    <initialConditions>
+      <radius>0.5</radius>
+      <position> <x>10</x> <y>0</y> <z>0</z> </position>
+      <direction> <x>-1</x> <y>0</y> <z>-1</z> </direction>
+      <speed>0</speed>
+    </initialConditions>
+    <goalSequence>
+      <seekStaticTarget>
+        <targetLocation> <x>-10</x> <y>0</y> <z>-15</z> </targetLocation>
+        <desiredSpeed>1.3</desiredSpeed>
+        <timeDuration>1000.0</timeDuration>
+      </seekStaticTarget>
+    </goalSequence>
+  </agent>
+
+  <agent>
+    <name>Top Right</name>
+    <initialConditions>
+      <radius>0.5</radius>
+      <position> <x>10</x> <y>0</y> <z>-15</z> </position>
+      <direction> <x>-1</x> <y>0</y> <z>1</z> </direction>
+      <speed>0</speed>
+    </initialConditions>
+    <goalSequence>
+      <seekStaticTarget>
+        <targetLocation> <x>-10</x> <y>0</y> <z>0</z> </targetLocation>
+        <desiredSpeed>1.3</desiredSpeed>
+        <timeDuration>1000.0</timeDuration>
+      </seekStaticTarget>
+    </goalSequence>
+
+  </agent>
+
+  <agent>
+    <name>Bottom Left</name>
+    <initialConditions>
+      <radius>0.5</radius>
+      <position> <x>-10</x> <y>0</y> <z>0</z> </position>
+      <direction> <x>1</x> <y>0</y> <z>-1</z> </direction>
+      <speed>0</speed>
+    </initialConditions>
+    <goalSequence>
+      <seekStaticTarget>
+        <targetLocation> <x>10</x> <y>0</y> <z>-15</z> </targetLocation>
+        <desiredSpeed>1.3</desiredSpeed>
+        <timeDuration>1000.0</timeDuration>
+      </seekStaticTarget>
+    </goalSequence>
+  </agent>
+
+</SteerBenchTestCase>
