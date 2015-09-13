@@ -43,7 +43,7 @@
     <xmax>-5</xmax>
     <ymin>0</ymin>
     <ymax>1</ymax>
-    <zmin>-20</zmin>
+    <zmin>-21</zmin>
     <zmax>-20</zmax>
   </obstacle>
   <obstacle>
@@ -52,35 +52,19 @@
     <ymin>0</ymin>
     <ymax>1</ymax>
     <zmin>-10</zmin>
-    <zmax>-10</zmax>
+    <zmax>-9</zmax>
   </obstacle>
   <obstacle>
-    <xmin>-15</xmin>
+    <xmin>-16</xmin>
     <xmax>-15</xmax>
     <ymin>0</ymin>
     <ymax>1</ymax>
-    <zmin>-10</zmin>
-    <zmax>-20</zmax>
+    <zmin>-21</zmin>
+    <zmax>-9</zmax>
   </obstacle>
   <obstacle>
     <xmin>-5</xmin>
-    <xmax>-5</xmax>
-    <ymin>0</ymin>
-    <ymax>1</ymax>
-    <zmin>-20</zmin>
-    <zmax>-17</zmax>
-  </obstacle>
-  <obstacle>
-    <xmin>-5</xmin>
-    <xmax>-5</xmax>
-    <ymin>0</ymin>
-    <ymax>1</ymax>
-    <zmin>-10</zmin>
-    <zmax>-13</zmax>
-  </obstacle>
-  <obstacle>
-    <xmin>-5</xmin>
-    <xmax>-5</xmax>
+    <xmax>-4</xmax>
     <ymin>0</ymin>
     <ymax>1</ymax>
     <zmin>-16</zmin>
@@ -89,47 +73,31 @@
 
   <!-- Top Right Room -->
   <obstacle>
-    <xmin>15</xmin>
-    <xmax>5</xmax>
+    <xmin>5</xmin>
+    <xmax>15</xmax>
     <ymin>0</ymin>
     <ymax>1</ymax>
-    <zmin>-20</zmin>
+    <zmin>-21</zmin>
     <zmax>-20</zmax>
   </obstacle>
   <obstacle>
-    <xmin>15</xmin>
-    <xmax>5</xmax>
-    <ymin>0</ymin>
-    <ymax>1</ymax>
-    <zmin>-10</zmin>
-    <zmax>-10</zmax>
-  </obstacle>
-  <obstacle>
-    <xmin>15</xmin>
+    <xmin>5</xmin>
     <xmax>15</xmax>
     <ymin>0</ymin>
     <ymax>1</ymax>
     <zmin>-10</zmin>
-    <zmax>-20</zmax>
+    <zmax>-9</zmax>
   </obstacle>
   <obstacle>
-    <xmin>5</xmin>
-    <xmax>5</xmax>
+    <xmin>15</xmin>
+    <xmax>16</xmax>
     <ymin>0</ymin>
     <ymax>1</ymax>
-    <zmin>-20</zmin>
-    <zmax>-17</zmax>
+    <zmin>-21</zmin>
+    <zmax>-9</zmax>
   </obstacle>
   <obstacle>
-    <xmin>5</xmin>
-    <xmax>5</xmax>
-    <ymin>0</ymin>
-    <ymax>1</ymax>
-    <zmin>-10</zmin>
-    <zmax>-13</zmax>
-  </obstacle>
-  <obstacle>
-    <xmin>5</xmin>
+    <xmin>4</xmin>
     <xmax>5</xmax>
     <ymin>0</ymin>
     <ymax>1</ymax>
@@ -140,30 +108,14 @@
   <!-- Bottom Right Room -->
   <obstacle>
     <xmin>15</xmin>
-    <xmax>15</xmax>
+    <xmax>16</xmax>
     <ymin>0</ymin>
     <ymax>1</ymax>
-    <zmin>-5</zmin>
-    <zmax>5</zmax>
+    <zmin>-6</zmin>
+    <zmax>6</zmax>
   </obstacle>
   <obstacle>
-    <xmin>5</xmin>
-    <xmax>5</xmax>
-    <ymin>0</ymin>
-    <ymax>1</ymax>
-    <zmin>-5</zmin>
-    <zmax>-2</zmax>
-  </obstacle>
-  <obstacle>
-    <xmin>5</xmin>
-    <xmax>5</xmax>
-    <ymin>0</ymin>
-    <ymax>1</ymax>
-    <zmin>2</zmin>
-    <zmax>5</zmax>
-  </obstacle>
-  <obstacle>
-    <xmin>5</xmin>
+    <xmin>4</xmin>
     <xmax>5</xmax>
     <ymin>0</ymin>
     <ymax>1</ymax>
@@ -171,49 +123,33 @@
     <zmax>1</zmax>
   </obstacle>
   <obstacle>
-    <xmin>15</xmin>
-    <xmax>5</xmax>
+    <xmin>5</xmin>
+    <xmax>15</xmax>
     <ymin>0</ymin>
     <ymax>1</ymax>
-    <zmin>-5</zmin>
+    <zmin>-6</zmin>
     <zmax>-5</zmax>
   </obstacle>
   <obstacle>
-    <xmin>15</xmin>
-    <xmax>5</xmax>
+    <xmin>5</xmin>
+    <xmax>15</xmax>
     <ymin>0</ymin>
     <ymax>1</ymax>
     <zmin>5</zmin>
-    <zmax>5</zmax>
+    <zmax>6</zmax>
   </obstacle>
 
   <!-- Bottom Left Room -->
   <obstacle>
-    <xmin>-15</xmin>
+    <xmin>-16</xmin>
     <xmax>-15</xmax>
     <ymin>0</ymin>
     <ymax>1</ymax>
-    <zmin>-5</zmin>
-    <zmax>5</zmax>
+    <zmin>-6</zmin>
+    <zmax>6</zmax>
   </obstacle>
   <obstacle>
-    <xmin>-5</xmin>
-    <xmax>-5</xmax>
-    <ymin>0</ymin>
-    <ymax>1</ymax>
-    <zmin>-5</zmin>
-    <zmax>-2</zmax>
-  </obstacle>
-  <obstacle>
-    <xmin>-5</xmin>
-    <xmax>-5</xmax>
-    <ymin>0</ymin>
-    <ymax>1</ymax>
-    <zmin>2</zmin>
-    <zmax>5</zmax>
-  </obstacle>
-  <obstacle>
-    <xmin>-5</xmin>
+    <xmin>-6</xmin>
     <xmax>-5</xmax>
     <ymin>0</ymin>
     <ymax>1</ymax>
@@ -225,7 +161,7 @@
     <xmax>-5</xmax>
     <ymin>0</ymin>
     <ymax>1</ymax>
-    <zmin>-5</zmin>
+    <zmin>-6</zmin>
     <zmax>-5</zmax>
   </obstacle>
   <obstacle>
@@ -234,10 +170,20 @@
     <ymin>0</ymin>
     <ymax>1</ymax>
     <zmin>5</zmin>
-    <zmax>5</zmax>
+    <zmax>6</zmax>
   </obstacle>
 
-  <!-- W-E Midsection -->
+  <!-- Any bigger and we crash with pprAI -->
+  <obstacle>
+    <xmin>-2</xmin>
+    <xmax>1</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-8</zmin>
+    <zmax>-7</zmax>
+  </obstacle>
+
+  <!-- W-E Midsection - All of these cause crashes
   <obstacle>
     <xmin>-15</xmin>
     <xmax>15</xmax>
@@ -246,7 +192,7 @@
     <zmin>-8</zmin>
     <zmax>-7</zmax>
   </obstacle>
-  <!-- Upper N-S Midsection -->
+  <!-- Upper N-S Midsection
   <obstacle>
     <xmin>-4</xmin>
     <xmax>4</xmax>
@@ -255,7 +201,7 @@
     <zmin>-20</zmin>
     <zmax>-8</zmax>
   </obstacle>
-  <!-- Lower N-S Midsection -->
+  <!-- Lower N-S Midsection
   <obstacle>
     <xmin>-4</xmin>
     <xmax>4</xmax>
@@ -264,6 +210,7 @@
     <zmin>-6</zmin>
     <zmax>5</zmax>
   </obstacle>
+-->
 
   <!-- Crashes due to too many agents in a given cell.
   <agentRegion>
@@ -296,7 +243,7 @@
     <initialConditions>
       <radius>0.5</radius>
       <position> <x>-10</x> <y>0</y> <z>-15</z> </position>
-      <direction> <x>1</x> <y>0</y> <z>1</z> </direction>
+      <direction> <x>1</x> <y>0</y> <z>0.5</z> </direction>
       <speed>0</speed>
     </initialConditions>
     <goalSequence>
